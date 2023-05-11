@@ -2,7 +2,8 @@
   --background-color:#35353abe;
   --title-colors: #adadad;
   --header-font: #adadad;
-  --hover-font:#ffffff;  
+  --hover-font:#ffffff;
+  --section-background1:#1f2d9456;  
   }
 
 *{
@@ -23,7 +24,7 @@ body{
   padding: 15px 30px;
 }
 /* Styles 'Avery Myers' on the header */
-.header-title{
+.header-name{
   color: var(--header-font);
   display: flex;
   flex-direction: column;
@@ -46,21 +47,21 @@ body{
   margin: 0 10px;
   align-items: center;
 }
-
+/* customizes the nav list items */
 .header nav ul li a {
   text-decoration: none;
   color:var(--header-font);
   font-size: 18px;
  align-items: center;
 }
-
+/* Changes the nav tag design when hovering */
 .header nav ul li a:hover {
   color:var(--hover-font);
-  text-decoration: underline !important;
+  text-decoration: underline;
 }
 
-
-@media only screen and (max-width: 609px) {
+/* Changes the format when the screen hits 609px */
+@media only screen and (max-width: 620px) {
   .header {
     height: 80px;
     padding: 0 15px;
@@ -71,7 +72,7 @@ body{
     padding: 15px;
   }
 
-  .header-title {
+  .header- {
     font-size: 32px;
     margin: 0;
     text-decoration: underline;
@@ -112,3 +113,53 @@ body{
   }
   
 }
+
+/* Styles main section fonts */
+.main h2 {
+  font-size: 40px;
+}
+
+/* Styles the entire about me section */
+#about-me-section {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 30px;
+  align-items:center;
+  background-color: var(--section-background1);
+  padding: 10px;
+  overflow-x: hidden;
+}
+
+/* Styles the about me header and associated photo */
+.about-me-header {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 90px;
+  margin-left: 90px;
+  text-align: center;
+}
+
+/* Styles the about-me article */
+.about-me-article {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  margin:90px;
+  margin-left: 0px;
+}
+
+/* style and sizes the photo in about me section */
+.about-me-photo img {
+  max-width: 60%;
+  height: auto;
+  align-items: center;
+  margin:auto;
+  margin-top: -20px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 10px;
+}
+
