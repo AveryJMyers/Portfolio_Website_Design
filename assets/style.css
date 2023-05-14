@@ -3,7 +3,8 @@
   --title-colors: #adadad;
   --header-font: #adadad;
   --hover-font:#ffffff;
-  --section-background1:#1f2d9456;  
+  --section-background1:#1f2d9456;
+  --border-colors:#070202;
   }
 
 *{
@@ -57,7 +58,6 @@ body{
 /* Changes the nav tag design when hovering */
 .header nav ul li a:hover {
   color:var(--hover-font);
-  text-decoration: underline;
 }
 
 /* Changes the format when the screen hits 609px */
@@ -72,10 +72,9 @@ body{
     padding: 15px;
   }
 
-  .header- {
+  .header-title {
     font-size: 32px;
     margin: 0;
-    text-decoration: underline;
   }
 
   .header nav{
@@ -109,9 +108,55 @@ body{
   }
   .header nav ul li a:hover {
     color:var(--hover-font);
-    text-decoration: underline;
   }
   
+  .main h2 {
+    font-size: 40px;
+  }
+
+  /* Styles the entire about me section */
+  .about-me-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    background-color: var(--section-background1);
+    overflow-x: hidden;
+    padding-bottom: 2%;
+    border: 3px solid var(--border-colors);
+    grid-gap: 0;
+
+  }
+
+  /* Styles the about me header and associated photo */
+  .about-me-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    grid-gap: 0;
+  }
+
+  /* Styles the about-me article */
+  .about-me-article {
+    margin:0;
+    padding-left: 10%;
+    padding-right: 10%;
+    text-align: center;
+  }
+
+  /* style and sizes the photo in about me section */
+  .about-me-photo img {
+    width: 160px;
+    align-items: center;
+    margin:auto;
+    margin-top: -20px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 10px;
+    display: none;
+  }
+
 }
 
 /* Styles main section fonts */
@@ -120,25 +165,26 @@ body{
 }
 
 /* Styles the entire about me section */
-#about-me-section {
+.about-me-section {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  grid-gap: 30px;
-  align-items:center;
+  grid-gap: 80px;
+  align-items:baseline;
   background-color: var(--section-background1);
-  padding: 10px;
   overflow-x: hidden;
+  padding-bottom: 2%;
+  border: 3px solid black;
 }
 
 /* Styles the about me header and associated photo */
-.about-me-header {
+.about-me-header { 
   grid-column: 1 / 2;
   grid-row: 1 / 2;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 90px;
-  margin-left: 90px;
+  margin: 0px;
+  margin-left: 0px;
   text-align: center;
 }
 
@@ -146,20 +192,93 @@ body{
 .about-me-article {
   grid-column: 2 / 3;
   grid-row: 1 / 2;
-  margin:90px;
-  margin-left: 0px;
+  margin:auto;
+  margin-right: 40%;
+  padding-top: 0;
 }
 
 /* style and sizes the photo in about me section */
 .about-me-photo img {
-  max-width: 60%;
-  height: auto;
+  width: 20%;
   align-items: center;
   margin:auto;
-  margin-top: -20px;
+  margin-top: 10px;
   border-width: 2px;
-  border-style: solid;
-  border-color: black;
-  border-radius: 10px;
+  border: 2px solid var(--border-colors);
+  border-radius: 13px;
 }
 
+@media only screen and (max-width: 620px) { 
+
+  .main h2 {
+    font-size: 40px;
+  }
+
+  /* Styles the entire about me section */ 
+  .about-me-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    background-color: var(--section-background1);
+    overflow-x: hidden;
+    padding-bottom: 0%;
+    border: 3px solid black;
+    grid-gap: 0;
+  }
+
+  /* Styles the about me header and associated photo */
+  .about-me-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    grid-gap: 0;
+    padding-top: 0px;
+  }
+
+  /* Styles the about-me article */
+  .about-me-article {
+    margin:0;
+    padding-left: 10%;
+    padding-right: 10%;
+    text-align: center;
+  }
+
+  /* style and sizes the photo in about me section */
+  .about-me-photo img {
+    width: 160px;
+    align-items: center;
+    margin-top: -20px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 10px;
+    display: none;
+  }
+}
+
+.study-guide,
+img{
+  margin-left: 0%;
+  border: black solid 5px;
+  padding-bottom: -2px;
+  width: 10%;
+}
+
+.work-header{
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0px;
+  margin-left: 0px;
+  text-align: center
+}
+
+.main h2{
+
+  text-align: center;
+  margin-left: 10%;
+
+}

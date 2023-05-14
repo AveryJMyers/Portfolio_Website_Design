@@ -1,0 +1,137 @@
+/* Set global font and background color */
+:root{
+  --background-color:#404064be;
+  --title-colors: #000000;
+  --header-font: #000000;
+  --hover-font:#ffffff;
+  --section-background1:#1f2d9456;
+  --border-colors:#070202;
+  }
+
+  *{
+    box-sizing: border-box;
+  }
+
+  body{
+    margin: 0;
+    padding: 0;
+  }
+
+  .main h2 {
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--header-font);
+    float:left;
+    width: 25%;
+  }
+
+  .main article{
+    font-size: 18px;
+    line-height: 1.5;
+    padding-left: 30%;
+    padding-right: 10%;
+  }
+
+
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--background-color);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1)
+  }
+  
+  .header-title {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header-name {
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--header-font);
+    margin-right: 20px;
+  }
+  
+  .header-photo img {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+  }
+  
+ .header nav {
+    display: flex;
+  }
+  
+ .header ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .header li {
+    margin-right: 20px;
+  }
+  
+  .header a {
+    text-decoration: none;
+    color: var(--title-colors);
+    font-size: 16px;
+  }
+
+  .header nav a:hover{
+  color: rgb(255, 255, 255);
+  }
+
+  .about-me-section {
+    background-color: var(--section-background1);
+    color: var(--hover-font);
+    border: 1px solid var(--border-colors);
+  }
+  /*  
+  .about-me-header {
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--header-font);
+    float:left;
+    width: 25%;
+    padding-left: 3%;
+    text-align: center;
+  }
+
+
+  .about-me-article {
+    font-size: 18px;
+    line-height: 1.5;
+    padding-left: 30%;
+    padding-right: 10%;
+  }
+
+
+*/
+
+.main img{
+border: solid var(--border-colors);
+}
+
+
+.horiseon-webpage{
+  width: 50%;
+  float: left;
+  margin-top: 5%;
+}
+
+.calc-webpage{
+  width: 50%;
+  float:right;
+  margin-top: 0px;
+}
+.study-guide{
+  width: 50%;
+  float:right;
+  margin-top: 5%;
+}
